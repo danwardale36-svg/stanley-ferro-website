@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 // @ts-ignore
-import logo from '@assets/FwmPQmrXgAA51T1_1786824909538.jpg';
+import logo from '@assets/stanley-ferro-logo.png';
 
 export function Footer() {
   return (
