@@ -82,7 +82,7 @@ export default function FullRefurbishments() {
             A full refurbishment requires a trusted contractor. Speak to Thomas and Ste today to discuss your vision and see how we can bring it to life on time and on budget.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 relative z-10" asChild>
-            <Link href="/contact">Get a Free Quotation</Link>
+            <Link href="/quote?service=refurbishment">Get a Free Quote</Link>
           </Button>
         </div>
       </div>

@@ -82,7 +82,7 @@ export default function LoftConversions() {
             Contact Thomas and Ste for a free site visit. We'll assess your roof space and advise you on the best conversion options for your property and budget.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 relative z-10" asChild>
-            <Link href="/contact">Get in Touch Today</Link>
+            <Link href="/quote?service=loft">Get a Free Quote</Link>
           </Button>
         </div>
       </div>

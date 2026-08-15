@@ -82,7 +82,7 @@ export default function HmoConversions() {
             Partner with a contractor who understands the specific demands of HMO conversions. Contact us to discuss your investment property.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 relative z-10" asChild>
-            <Link href="/contact">Request a Consultation</Link>
+            <Link href="/quote?service=hmo">Get a Free Quote</Link>
           </Button>
         </div>
       </div>

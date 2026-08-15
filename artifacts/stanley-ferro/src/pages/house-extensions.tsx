@@ -82,7 +82,7 @@ export default function HouseExtensions() {
             Let Thomas and Ste help you unlock the potential of your property. We offer free, no-obligation quotes for all house extensions in Crosby and Merseyside.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 relative z-10" asChild>
-            <Link href="/contact">Get a Free Quote</Link>
+            <Link href="/quote?service=extensions">Get a Free Quote</Link>
           </Button>
         </div>
       </div>

@@ -72,7 +72,7 @@ export default function Bathrooms() {
             Contact us today to discuss your ideas. We provide expert advice, transparent pricing, and a commitment to exceptional craftsmanship.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 relative z-10" asChild>
-            <Link href="/contact">Discuss Your Project</Link>
+            <Link href="/quote?service=bathroom">Get a Free Quote</Link>
           </Button>
         </div>
       </div>

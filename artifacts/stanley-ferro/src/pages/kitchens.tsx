@@ -72,7 +72,7 @@ export default function Kitchens() {
             Let us help you create a space you'll love to cook and entertain in. Contact us today to discuss your new kitchen installation.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 relative z-10" asChild>
-            <Link href="/contact">Get a Free Quote</Link>
+            <Link href="/quote?service=kitchen">Get a Free Quote</Link>
           </Button>
         </div>
       </div>

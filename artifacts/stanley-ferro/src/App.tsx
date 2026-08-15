@@ -22,6 +22,7 @@ import Bathrooms from './pages/bathrooms';
 import HmoConversions from './pages/hmo-conversions';
 import Gallery from './pages/gallery';
 import Contact from './pages/contact';
+import Quote from './pages/quote';
 import Privacy from './pages/privacy';
 import Terms from './pages/terms';
 
@@ -43,6 +44,7 @@ function Router() {
           <Route path="/hmo-conversions" component={HmoConversions} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/contact" component={Contact} />
+          <Route path="/quote" component={Quote} />
           <Route path="/privacy" component={Privacy} />
           <Route path="/terms" component={Terms} />
           <Route component={NotFound} />

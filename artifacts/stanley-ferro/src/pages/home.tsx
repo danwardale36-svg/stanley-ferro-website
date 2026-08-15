@@ -49,7 +49,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg h-14 px-8" asChild>
-                <Link href="/contact">Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Link href="/quote">Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white text-lg h-14 px-8" asChild>
                 <Link href="/gallery">View Our Work</Link>
@@ -193,7 +193,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 w-full sm:w-auto" asChild>
-              <Link href="/contact">Get in Touch</Link>
+              <Link href="/quote">Request a Quote</Link>
             </Button>
             <div className="flex flex-col sm:flex-row items-center gap-4 text-[#091405] font-semibold text-lg">
               <div className="flex items-center gap-2">
