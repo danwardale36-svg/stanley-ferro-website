@@ -37,7 +37,7 @@ export default function Home() {
               Stanley Ferro Developments
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Construction Contractors In <span className="text-primary">Crosby</span>
+              Construction Contractors In <span className="text-primary">Merseyside</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl font-light">
               Get in touch today to discuss your home. We focus on house additions, loft conversions, and total home renovations.
