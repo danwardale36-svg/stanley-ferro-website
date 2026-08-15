@@ -32,16 +32,35 @@ export default function Contact() {
     resolver: zodResolver(contactSchema)
   });
 
-  const onSubmit = (data: any) => {
-    console.log(data);
-    // Simulate API call
-    setTimeout(() => {
-      toast({
-        title: "Message Sent Successfully",
-        description: "Thank you for getting in touch. Thomas or Ste will contact you shortly.",
+  const onSubmit = async (data: any) => {
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: '08cc5551-9a93-4900-8ce8-176697290a62',
+          subject: `New enquiry from ${data.name} — ${data.service}`,
+          from_name: 'Stanley Ferro Website',
+          ...data
+        })
       });
-      reset();
-    }, 1000);
+      const result = await response.json();
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for getting in touch. Thomas or Ste will contact you shortly.",
+        });
+        reset();
+      } else {
+        throw new Error(result.message);
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please call us directly on 07791 151427 or email sfdltd@outlook.com",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -85,7 +104,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-bold text-[#091405] text-lg mb-1">Email Us</h4>
                   <p className="text-muted-foreground">
-                    <a href="mailto:info@stanleyferro.co.uk" className="text-primary hover:underline font-medium">info@stanleyferro.co.uk</a>
+                    <a href="mailto:sfdltd@outlook.com" className="text-primary hover:underline font-medium">sfdltd@outlook.com</a>
                   </p>
                 </div>
               </div>
