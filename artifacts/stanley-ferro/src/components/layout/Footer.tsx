@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 // @ts-ignore
-import logo from '@assets/stanley-ferro-logo.png';
+import logo from '@assets/FwmPQmrXgAA51T1_1786824909538.jpg';
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand Col */}
           <div className="flex flex-col space-y-4">
             <div className="inline-block w-fit mb-2">
-              <img src={logo} alt="Stanley Ferro Developments" className="h-20 object-contain" />
+              <img src={logo} alt="Stanley Ferro Developments" className="h-20 object-contain" style={{ mixBlendMode: 'lighten' }} />
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               A reputable building contractor company focusing on house additions, loft conversions, and total home renovations across Crosby and surrounding areas.
