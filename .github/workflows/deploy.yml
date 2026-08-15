@@ -34,7 +34,7 @@ jobs:
           ASSETS="artifacts/stanley-ferro/dist/public/assets"
           for f in "$ASSETS"/*.jpg "$ASSETS"/*.jpeg "$ASSETS"/*.png; do
             [ -f "$f" ] || continue
-            magick "$f" -resize "1920x1920>" -quality 75 -strip "$f"
+            convert "$f" -resize "1920x1920>" -quality 75 -strip "$f"
           done
 
       - name: Write .htaccess
