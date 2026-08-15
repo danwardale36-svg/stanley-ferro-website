@@ -12,7 +12,7 @@ export function Footer() {
           
           {/* Brand Col */}
           <div className="flex flex-col space-y-4">
-            <div className="bg-black rounded-md inline-block w-fit mb-2">
+            <div className="inline-block w-fit mb-2">
               <img src={logo} alt="Stanley Ferro Developments" className="h-20 object-contain" />
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
