@@ -5,7 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 
 // @ts-ignore
-import kitchensImg from '@assets/generated_images/kitchens.jpg';
+import kitchensImg from '@assets/14_a1e76b_9c4c8f4c353d4dba9badc9d18be3914e_1786824412975.jpeg';
+// @ts-ignore
+import kitchensImg2 from '@assets/17_a1e76b_30bf3fbf9e984b1ab783cdeba6170a57_1786824412975.jpg';
 
 export default function Kitchens() {
   return (
@@ -53,8 +55,8 @@ export default function Kitchens() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-2 gap-4"
           >
-            <img src={kitchensImg} alt="Modern kitchen island" className="w-full h-80 object-cover rounded-xl" />
-            <img src={kitchensImg} alt="Kitchen appliances" className="w-full h-64 object-cover rounded-xl mt-8" />
+            <img src={kitchensImg} alt="Navy blue shaker kitchen with island" className="w-full h-80 object-cover rounded-xl" />
+            <img src={kitchensImg2} alt="Kitchen with Smeg range cooker" className="w-full h-64 object-cover rounded-xl mt-8" />
           </motion.div>
         </div>
 

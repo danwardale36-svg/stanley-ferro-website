@@ -4,13 +4,13 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 
 // @ts-ignore
-import heroImg from '@assets/generated_images/home-hero.jpg';
+import heroImg from '@assets/15_a1e76b_9cfe61dbe7c547e491ee0b66a6787182_1786824412975.jpg';
 // @ts-ignore
-import extensionsImg from '@assets/generated_images/house-extensions.jpg';
+import extensionsImg from '@assets/5_a1e76b_4d222dd0d26f4de69ef0d2b7910cc5c7_1786824412975.jpg';
 // @ts-ignore
-import loftImg from '@assets/generated_images/loft-conversions.jpg';
+import loftImg from '@assets/3_a1e76b_03a9bd348eed4259af23a98cd95096fb_1786824412975.jpg';
 // @ts-ignore
-import refurbImg from '@assets/generated_images/full-refurbishments.jpg';
+import refurbImg from '@assets/2_a1e76b_1c661abb9b4f49c1a4b6abca8723d47d_1786824412974.jpg';
 
 export default function Home() {
   return (

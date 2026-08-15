@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Button } from '../ui/button';
 
 // @ts-ignore - Local asset import
-import logo from '@assets/stanley-ferro-logo.png';
+import logo from '@assets/0_a1e76b_81dd05ce246a40cab0654aee7ff74e5d_1786824390280.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -28,7 +28,7 @@ export function Header() {
       {/* Top Bar - Logo and Contact */}
       <div className="container mx-auto px-4 md:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/" className="shrink-0 flex items-center">
-          <img src={logo} alt="Stanley Ferro Developments" className="h-16 md:h-20 object-contain" />
+          <img src={logo} alt="Stanley Ferro Developments" className="h-24 md:h-32 object-contain" />
         </Link>
         
         <div className="flex items-center gap-6 text-sm text-foreground/80">

@@ -5,7 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 
 // @ts-ignore
-import loftImg from '@assets/generated_images/loft-conversions.jpg';
+import loftImg from '@assets/3_a1e76b_03a9bd348eed4259af23a98cd95096fb_1786824412975.jpg';
+// @ts-ignore
+import loftImg2 from '@assets/12_a1e76b_9b9537878c2a415f971596c27c7e51ee_1786824412975.png';
 
 export default function LoftConversions() {
   return (
@@ -53,8 +55,8 @@ export default function LoftConversions() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-2 gap-4"
           >
-            <img src={loftImg} alt="Loft conversion bedroom" className="w-full h-80 object-cover rounded-xl" />
-            <img src={loftImg} alt="Loft conversion skylights" className="w-full h-64 object-cover rounded-xl mt-8" />
+            <img src={loftImg} alt="Loft conversion exterior" className="w-full h-80 object-cover rounded-xl" />
+            <img src={loftImg2} alt="Loft conversion dormer detail" className="w-full h-64 object-cover rounded-xl mt-8" />
           </motion.div>
         </div>
 

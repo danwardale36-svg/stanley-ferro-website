@@ -5,7 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 
 // @ts-ignore
-import extensionsImg from '@assets/generated_images/house-extensions.jpg';
+import extensionsImg from '@assets/15_a1e76b_9cfe61dbe7c547e491ee0b66a6787182_1786824412975.jpg';
+// @ts-ignore
+import extensionsImg2 from '@assets/5_a1e76b_4d222dd0d26f4de69ef0d2b7910cc5c7_1786824412975.jpg';
 
 export default function HouseExtensions() {
   return (
@@ -53,8 +55,8 @@ export default function HouseExtensions() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-2 gap-4"
           >
-            <img src={extensionsImg} alt="House extension interior" className="w-full h-64 object-cover rounded-xl mt-8" />
-            <img src={extensionsImg} alt="House extension exterior" className="w-full h-80 object-cover rounded-xl" />
+            <img src={extensionsImg2} alt="House extension under construction" className="w-full h-64 object-cover rounded-xl mt-8" />
+            <img src={extensionsImg} alt="Completed house extension" className="w-full h-80 object-cover rounded-xl" />
           </motion.div>
         </div>
 

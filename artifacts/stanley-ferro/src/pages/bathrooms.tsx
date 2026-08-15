@@ -5,7 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 
 // @ts-ignore
-import bathroomsImg from '@assets/generated_images/bathrooms.jpg';
+import bathroomsImg from '@assets/0_a1e76b_0b993bf785c34c17917433867057587d_1786824412974.jpg';
+// @ts-ignore
+import bathroomsImg2 from '@assets/4_a1e76b_3d8e82447e0949078376ddcb185766a5_1786824412975.jpg';
 
 export default function Bathrooms() {
   return (
@@ -53,8 +55,8 @@ export default function Bathrooms() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-2 gap-4"
           >
-            <img src={bathroomsImg} alt="Luxury freestanding tub" className="w-full h-64 object-cover rounded-xl mt-8" />
-            <img src={bathroomsImg} alt="Modern walk-in shower" className="w-full h-80 object-cover rounded-xl" />
+            <img src={bathroomsImg} alt="Walk-in shower with freestanding tub" className="w-full h-64 object-cover rounded-xl mt-8" />
+            <img src={bathroomsImg2} alt="Marble-tiled bathroom" className="w-full h-80 object-cover rounded-xl" />
           </motion.div>
         </div>
 

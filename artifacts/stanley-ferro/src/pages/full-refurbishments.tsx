@@ -5,7 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 
 // @ts-ignore
-import refurbImg from '@assets/generated_images/full-refurbishments.jpg';
+import refurbImg from '@assets/2_a1e76b_1c661abb9b4f49c1a4b6abca8723d47d_1786824412974.jpg';
+// @ts-ignore
+import refurbImg2 from '@assets/8_a1e76b_6bbe6eb3c4d449dcbf660a18e73a2fc7_1786824412975.jpg';
 
 export default function FullRefurbishments() {
   return (
@@ -54,7 +56,7 @@ export default function FullRefurbishments() {
             className="grid grid-cols-2 gap-4"
           >
             <img src={refurbImg} alt="Modern living room refurbishment" className="w-full h-64 object-cover rounded-xl mt-8" />
-            <img src={refurbImg} alt="Open plan refurbished space" className="w-full h-80 object-cover rounded-xl" />
+            <img src={refurbImg2} alt="Open plan refurbished room with hardwood floor" className="w-full h-80 object-cover rounded-xl" />
           </motion.div>
         </div>
 

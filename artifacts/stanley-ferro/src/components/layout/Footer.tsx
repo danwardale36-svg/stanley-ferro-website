@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
-import logo from '@assets/stanley-ferro-logo.png';
+// @ts-ignore
+import logo from '@assets/0_a1e76b_81dd05ce246a40cab0654aee7ff74e5d_1786824390280.png';
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
           {/* Brand Col */}
           <div className="flex flex-col space-y-4">
             <div className="bg-white p-4 rounded-md inline-block w-fit mb-2">
-              <img src={logo} alt="Stanley Ferro Developments" className="h-12 object-contain" />
+              <img src={logo} alt="Stanley Ferro Developments" className="h-20 object-contain" />
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               A reputable building contractor company focusing on house additions, loft conversions, and total home renovations across Crosby and surrounding areas.
@@ -69,7 +70,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <a href="mailto:info@stanleyferro.co.uk" className="hover:text-primary transition-colors">info@stanleyferro.co.uk</a>
+                <a href="mailto:sfdltd@outlook.com" className="hover:text-primary transition-colors">sfdltd@outlook.com</a>
               </li>
             </ul>
           </div>

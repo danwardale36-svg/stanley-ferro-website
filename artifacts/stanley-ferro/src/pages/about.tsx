@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 
 // @ts-ignore
-import aboutImg from '@assets/generated_images/full-refurbishments.jpg';
+import aboutImg from '@assets/15_a1e76b_9cfe61dbe7c547e491ee0b66a6787182_1786824412975.jpg';
 
 export default function About() {
   return (

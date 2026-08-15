@@ -5,7 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 
 // @ts-ignore
-import hmoImg from '@assets/generated_images/hmo-conversions.jpg';
+import hmoImg from '@assets/8_a1e76b_6bbe6eb3c4d449dcbf660a18e73a2fc7_1786824412975.jpg';
+// @ts-ignore
+import hmoImg2 from '@assets/10_a1e76b_7a0650ae898545d1be334e95ce6f3106_1786824412975.png';
 
 export default function HmoConversions() {
   return (
@@ -53,8 +55,8 @@ export default function HmoConversions() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-2 gap-4"
           >
-            <img src={hmoImg} alt="HMO communal area" className="w-full h-80 object-cover rounded-xl" />
-            <img src={hmoImg} alt="HMO bedroom" className="w-full h-64 object-cover rounded-xl mt-8" />
+            <img src={hmoImg} alt="Refurbished room with hardwood floor" className="w-full h-80 object-cover rounded-xl" />
+            <img src={hmoImg2} alt="Open plan extension with bifold doors" className="w-full h-64 object-cover rounded-xl mt-8" />
           </motion.div>
         </div>
 
