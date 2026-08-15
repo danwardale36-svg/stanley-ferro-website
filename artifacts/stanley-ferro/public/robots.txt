@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://stanleyferrodevelopments.co.uk/sitemap.xml
