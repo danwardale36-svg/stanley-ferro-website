@@ -78,11 +78,14 @@ export function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
-          <p>&copy; {new Date().getFullYear()} Stanley Ferro Developments Ltd. All rights reserved.</p>
-          <div className="flex space-x-6">
-            <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+        <div className="pt-8 border-t border-white/10 space-y-4 text-xs text-white/50">
+          <p className="text-center">Stanley Ferro Developments Ltd, registered as a limited company in England and Wales under company number: <strong className="text-white/70">10895434</strong>. Registered address: 33 Park Road, Waterloo, Liverpool.</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; {new Date().getFullYear()} Stanley Ferro Developments Ltd. All rights reserved.</p>
+            <div className="flex space-x-6">
+              <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
+              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            </div>
           </div>
         </div>
       </div>

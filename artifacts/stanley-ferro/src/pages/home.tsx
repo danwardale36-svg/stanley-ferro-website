@@ -128,7 +128,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm font-medium text-[#091405]">"Highly recommended. Professional, tidy, and finished to an amazing standard."</p>
+                <p className="text-sm font-medium text-[#091405]">"If you want reliability, professionalism and quality work just don't look further! Passionate about their work and always willing to go the extra mile."</p>
               </div>
             </motion.div>
           </div>

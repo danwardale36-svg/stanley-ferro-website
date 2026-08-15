@@ -60,6 +60,16 @@ export default function HmoConversions() {
           </motion.div>
         </div>
 
+        <div className="bg-primary/10 border-l-4 border-primary rounded-xl p-8 my-4">
+          <div className="flex gap-1 mb-3">
+            {[1,2,3,4,5].map(i => <svg key={i} className="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>)}
+          </div>
+          <blockquote className="text-[#091405] italic leading-relaxed mb-3">
+            "The team at Stanley Ferro was very professional and supportive throughout our full property renovation. They provided a detailed quotation, itemising each task that was to be undertaken. This made settling up at the end of the project really easy."
+          </blockquote>
+          <p className="text-sm font-semibold text-primary">Verified Customer — HMO Conversion</p>
+        </div>
+
         <div className="bg-[#091405] rounded-2xl p-8 md:p-16 text-center text-white relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
           <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 relative z-10">Looking to convert a property?</h3>
