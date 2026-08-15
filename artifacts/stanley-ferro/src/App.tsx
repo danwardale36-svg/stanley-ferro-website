@@ -21,6 +21,7 @@ import Bathrooms from './pages/bathrooms';
 import HmoConversions from './pages/hmo-conversions';
 import Gallery from './pages/gallery';
 import Contact from './pages/contact';
+import Privacy from './pages/privacy';
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ function Router() {
           <Route path="/hmo-conversions" component={HmoConversions} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/contact" component={Contact} />
+          <Route path="/privacy" component={Privacy} />
           <Route component={NotFound} />
         </Switch>
       </RoutedErrorBoundary>
