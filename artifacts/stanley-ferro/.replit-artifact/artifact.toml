@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Stanley Ferro Developments"
+description = "A professional construction contractor website for Stanley Ferro Developments Ltd, based in Crosby. Showcases their services including house extensions, loft conversions, full refurbishments, kitchens, bathrooms, and HMO conversions. Provides contact information and a gallery of completed projects."
+version = "1.0.0"
+id = "artifacts/stanley-ferro"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19890
+
+[services.development]
+run = "pnpm --filter @workspace/stanley-ferro run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/stanley-ferro", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/stanley-ferro/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19890"
+BASE_PATH = "/"
