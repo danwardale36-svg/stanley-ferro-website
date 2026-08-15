@@ -3,12 +3,10 @@ name: Build & Deploy to Krystal
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -16,7 +14,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -28,23 +26,15 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build site
-        run: pnpm --filter @workspace/stanley-ferro run build
-        env:
-          PORT: 3000
-          BASE_PATH: /
-          NODE_ENV: production
+        run: PORT=3000 BASE_PATH=/ pnpm --filter @workspace/stanley-ferro run build
 
       - name: Compress images
         run: |
           sudo apt-get install -y imagemagick
           ASSETS="artifacts/stanley-ferro/dist/public/assets"
-          for f in "$ASSETS"/*.jpg "$ASSETS"/*.jpeg; do
+          for f in "$ASSETS"/*.jpg "$ASSETS"/*.jpeg "$ASSETS"/*.png; do
             [ -f "$f" ] || continue
-            convert "$f" -resize "1920x1920>" -quality 75 -strip "$f"
-          done
-          for f in "$ASSETS"/*.png; do
-            [ -f "$f" ] || continue
-            convert "$f" -resize "1920x1920>" -quality 75 -strip "$f"
+            magick "$f" -resize "1920x1920>" -quality 75 -strip "$f"
           done
 
       - name: Write .htaccess
@@ -55,25 +45,28 @@ jobs:
           RewriteCond %{REQUEST_FILENAME} !-f
           RewriteRule ^ index.html [QSA,L]
 
-          # Never cache HTML — always serve fresh
           <FilesMatch "\.(html)$">
             Header set Cache-Control "no-store, no-cache, must-revalidate"
             Header set Pragma "no-cache"
           </FilesMatch>
 
-          # Cache assets (JS/CSS/images) for 1 year — they have hashed filenames
           <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|ico|webp|woff2?)$">
             Header set Cache-Control "public, max-age=31536000, immutable"
           </FilesMatch>
           EOF
 
       - name: Deploy via FTP to Krystal
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: artifacts/stanley-ferro/dist/public/
-          server-dir: /
-          dangerous-clean-slate: true
-          log-level: verbose
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          sudo apt-get install -y lftp
+          lftp -d -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER" << 'LFTP'
+          set ftp:ssl-allow yes
+          set ssl:verify-certificate no
+          set net:timeout 30
+          set net:max-retries 3
+          mirror --reverse --delete --verbose --parallel=3 artifacts/stanley-ferro/dist/public/ /
+          quit
+          LFTP
