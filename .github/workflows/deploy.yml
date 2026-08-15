@@ -1,0 +1,65 @@
+name: Build & Deploy to Krystal
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # lets you trigger manually from GitHub
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site
+        run: pnpm --filter @workspace/stanley-ferro run build
+        env:
+          PORT: 3000
+          BASE_PATH: /
+
+      - name: Compress images
+        run: |
+          ASSETS="artifacts/stanley-ferro/dist/public/assets"
+          for f in "$ASSETS"/*.jpg "$ASSETS"/*.jpeg; do
+            [ -f "$f" ] || continue
+            convert "$f" -resize "1920x1920>" -quality 75 -strip "$f"
+          done
+          for f in "$ASSETS"/*.png; do
+            [ -f "$f" ] || continue
+            convert "$f" -resize "1920x1920>" -quality 75 -strip "$f"
+          done
+
+      - name: Write .htaccess
+        run: |
+          cat > artifacts/stanley-ferro/dist/public/.htaccess << 'EOF'
+          Options -MultiViews
+          RewriteEngine On
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteRule ^ index.html [QSA,L]
+          EOF
+
+      - name: Deploy via FTP to Krystal
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: artifacts/stanley-ferro/dist/public/
+          server-dir: public_html/
+          dangerous-clean-slate: false
