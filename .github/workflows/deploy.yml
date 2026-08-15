@@ -36,6 +36,7 @@ jobs:
 
       - name: Compress images
         run: |
+          sudo apt-get install -y imagemagick
           ASSETS="artifacts/stanley-ferro/dist/public/assets"
           for f in "$ASSETS"/*.jpg "$ASSETS"/*.jpeg; do
             [ -f "$f" ] || continue
