@@ -29,7 +29,7 @@ export function Header() {
       {/* Top Bar - Logo and Contact */}
       <div className="bg-black px-4 md:px-6 py-2 flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/" className="shrink-0 flex items-center">
-          <img src={logo} alt="Stanley Ferro Developments" className="h-40 md:h-52 object-contain" />
+          <img src={logo} alt="Stanley Ferro Developments" className="h-48 md:h-64 object-contain" />
         </Link>
         
         <div className="flex items-center gap-6 text-sm text-white/80">
