@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,10 @@ import loftImg2 from '@assets/12_a1e76b_9b9537878c2a415f971596c27c7e51ee_1786824
 export default function LoftConversions() {
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>Loft conversions | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="Make the most of your loft space with Stanley Ferro Developments, Crosby. We handle all aspects of loft conversions: call our team today for a quote." />
+      </Helmet>
       <PageHeader 
         title="Loft Conversions" 
         subtitle="Unlock the hidden space in your home with a stunning, functional loft conversion."

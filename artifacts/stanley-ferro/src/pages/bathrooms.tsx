@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,10 @@ import bathroomsImg2 from '@assets/4_a1e76b_3d8e82447e0949078376ddcb185766a5_178
 export default function Bathrooms() {
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>Bathroom fitting | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="For luxury bathroom fitting in Crosby and across Merseyside, contact Stanley Ferro Developments. Expert bathroom installers working to a high standard. Call today." />
+      </Helmet>
       <PageHeader 
         title="Luxury Bathrooms" 
         subtitle="Beautiful, relaxing, and impeccably finished bathroom refits."

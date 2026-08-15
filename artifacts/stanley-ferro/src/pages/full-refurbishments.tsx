@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,10 @@ import refurbImg2 from '@assets/8_a1e76b_6bbe6eb3c4d449dcbf660a18e73a2fc7_178682
 export default function FullRefurbishments() {
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>Property refurbishments, Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="Make those must-do property refurbishments with the help of Stanley Ferro Developments. Based in Crosby we work with homeowners and developers in the area." />
+      </Helmet>
       <PageHeader 
         title="Full Refurbishments" 
         subtitle="Complete property renovations, managed from concept to flawless completion."

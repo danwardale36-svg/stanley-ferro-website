@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,10 @@ import kitchensImg2 from '@assets/17_a1e76b_30bf3fbf9e984b1ab783cdeba6170a57_178
 export default function Kitchens() {
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>Kitchen fitting | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="For bespoke kitchen fitting in Crosby and across Merseyside, contact Stanley Ferro Developments. Quality kitchens fitted to a high standard. Call us today." />
+      </Helmet>
       <PageHeader 
         title="Bespoke Kitchens" 
         subtitle="The heart of the home, expertly fitted with precision and care."

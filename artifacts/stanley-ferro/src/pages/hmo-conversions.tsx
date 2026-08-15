@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,10 @@ import hmoImg2 from '@assets/10_a1e76b_7a0650ae898545d1be334e95ce6f3106_17868244
 export default function HmoConversions() {
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>HMO conversions | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="Ensure your HMO conversions meet current UK regulations, with Stanley Ferro Developments. We are ready to work with developers and landlords in Crosby." />
+      </Helmet>
       <PageHeader 
         title="HMO Conversions" 
         subtitle="Expert House in Multiple Occupation conversions designed for maximum yield and compliance."

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle2, Phone } from 'lucide-react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
@@ -15,6 +16,10 @@ import refurbImg from '@assets/2_a1e76b_1c661abb9b4f49c1a4b6abca8723d47d_1786824
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
+      <Helmet>
+        <title>Construction Contractors | Stanley Ferro Developments Ltd</title>
+        <meta name="description" content="For construction contractors visit Stanley Ferro Developments in Crosby. Visit our website for more information and get in touch with us today." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[85vh] min-h-[600px] w-full bg-[#091405] flex items-center">
         <div className="absolute inset-0 z-0">

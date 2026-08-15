@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CheckCircle2, Shield, HeartHandshake, Hammer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,6 +11,10 @@ import aboutImg from '@assets/15_a1e76b_9cfe61dbe7c547e491ee0b66a6787182_1786824
 export default function About() {
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>Home Improvements | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="If you are looking for home improvements in or around Crosby, contact Stanley Ferro Developments today for a free quote or visit our website. We cover across Liverpool." />
+      </Helmet>
       <PageHeader 
         title="About Us" 
         subtitle="A local, family-run contractor built on trust, quality, and hard work."

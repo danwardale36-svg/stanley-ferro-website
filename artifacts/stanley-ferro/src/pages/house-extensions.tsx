@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,10 @@ import extensionsImg2 from '@assets/5_a1e76b_4d222dd0d26f4de69ef0d2b7910cc5c7_17
 export default function HouseExtensions() {
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>House extensions | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="Enjoy more space, with Stanley Ferro Developments. Our team handles house extensions, renovations and more throughout the Crosby area. Call us today." />
+      </Helmet>
       <PageHeader 
         title="House Extensions" 
         subtitle="Expand your living space and add significant value to your property with our premium house extension services."

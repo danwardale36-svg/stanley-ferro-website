@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -65,6 +66,10 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col w-full pb-24">
+      <Helmet>
+        <title>Building renovations | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="For your queries regarding building renovations in and around Crosby, contact Stanley Ferro Developments today by calling 07714 873398 or 07791 151427." />
+      </Helmet>
       <PageHeader 
         title="Contact Us" 
         subtitle="Get in touch today to discuss your home. We offer free, no-obligation quotations."

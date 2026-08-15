@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { PageHeader } from '@/components/layout/PageHeader';
 
 // @ts-ignore
@@ -109,6 +110,10 @@ const projects = [
 export default function Gallery() {
   return (
     <div className="flex flex-col w-full pb-24 bg-gray-50">
+      <Helmet>
+        <title>Project gallery | Stanley Ferro Developments | Crosby</title>
+        <meta name="description" content="View recent projects from Stanley Ferro Developments across Crosby and Merseyside. House extensions, loft conversions, refurbishments, kitchens and bathrooms." />
+      </Helmet>
       <PageHeader 
         title="Project Gallery" 
         subtitle="Take a look at some of our recent transformations across Crosby and Merseyside."
