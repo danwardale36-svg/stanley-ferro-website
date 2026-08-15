@@ -1,0 +1,9 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "_EeDyXJhwlvIe2c0n2WxO"
+uri = "file://stanley-ferro-site.zip"
+type = "unspecified"
+title = "Stanley Ferro — Ready to Upload"
+description = "Built site ready for Krystal. Upload the contents of the public/ folder into public_html on your hosting."

@@ -1,10 +1,11 @@
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Facebook, Instagram, Twitter, Phone } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, Phone } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
 import { useState } from 'react';
 import { Button } from '../ui/button';
 
 // @ts-ignore - Local asset import
-import logo from '@assets/0_a1e76b_81dd05ce246a40cab0654aee7ff74e5d_1786824390280.png';
+import logo from '@assets/FwmPQmrXgAA51T1_1786824909538.jpg';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -24,39 +25,39 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full flex flex-col bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full flex flex-col shadow-sm">
       {/* Top Bar - Logo and Contact */}
-      <div className="container mx-auto px-4 md:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="bg-black px-4 md:px-6 py-2 flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/" className="shrink-0 flex items-center">
-          <img src={logo} alt="Stanley Ferro Developments" className="h-24 md:h-32 object-contain" />
+          <img src={logo} alt="Stanley Ferro Developments" className="h-32 md:h-44 object-contain" />
         </Link>
         
-        <div className="flex items-center gap-6 text-sm text-foreground/80">
+        <div className="flex items-center gap-6 text-sm text-white/80">
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-primary" />
               <div className="flex flex-col">
-                <span className="font-semibold text-foreground">Thomas</span>
+                <span className="font-semibold text-white">Thomas</span>
                 <span>07791 151427</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-primary" />
               <div className="flex flex-col">
-                <span className="font-semibold text-foreground">Ste</span>
+                <span className="font-semibold text-white">Ste</span>
                 <span>07714 873398</span>
               </div>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-3 border-l border-border pl-6">
-            <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+          <div className="hidden md:flex items-center gap-3 border-l border-white/20 pl-6">
+            <a href="https://www.facebook.com/p/Stanley-Ferro-Developments-Limited-100065145694491/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-primary transition-colors">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+            <a href="https://www.instagram.com/stanleyferrodevelopments/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-primary transition-colors">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-              <Twitter className="h-5 w-5" />
+            <a href="https://x.com/ferro_ltd" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-primary transition-colors">
+              <FaXTwitter className="h-5 w-5" />
             </a>
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function About() {
           >
             <h2 className="text-3xl md:text-5xl font-display font-bold text-[#091405] mb-6">The Stanley Ferro Story</h2>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              Stanley Ferro Developments Ltd is a reputable building contractor company serving homeowners across Crosby and Merseyside. Founded by brothers Thomas and Ste, we've built our business on the simple principle that good construction requires honesty, clear communication, and an unwavering commitment to quality.
+              Stanley Ferro Developments Ltd is a reputable building contractor company serving homeowners across Crosby and Merseyside. Founded by friends Thomas and Ste, we've built our business on the simple principle that good construction requires honesty, clear communication, and an unwavering commitment to quality.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We grew up in the area and understand the local architecture. When you hire us, you're not just getting a team of builders — you're getting local tradesmen who care deeply about their reputation and the community they serve. From the initial consultation to the final sweep-up, Thomas and Ste are hands-on, ensuring every detail meets our high standards.

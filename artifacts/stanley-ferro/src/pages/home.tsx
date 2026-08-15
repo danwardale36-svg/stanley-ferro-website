@@ -99,7 +99,7 @@ export default function Home() {
                 A reputable building contractor company, Stanley Ferro Developments Ltd focuses on house additions, loft conversions, and total home renovations. We take pride in our work.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Run by brothers Thomas and Ste, we bring decades of combined experience to every project. Whether you're looking to expand your living space or completely modernise your property, our team delivers exceptional results with minimal disruption to your daily life.
+                Run by friends Thomas and Ste, we bring decades of combined experience to every project. Whether you're looking to expand your living space or completely modernise your property, our team delivers exceptional results with minimal disruption to your daily life.
               </p>
               <Button size="lg" variant="outline" className="border-[#091405] text-[#091405] hover:bg-[#091405] hover:text-white" asChild>
                 <Link href="/about">Read Our Story</Link>
@@ -190,9 +190,16 @@ export default function Home() {
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8 w-full sm:w-auto" asChild>
               <Link href="/contact">Get in Touch</Link>
             </Button>
-            <div className="flex items-center gap-3 text-[#091405] font-semibold text-lg">
-              <Phone className="h-6 w-6 text-primary" />
-              <span>07791 151427</span>
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-[#091405] font-semibold text-lg">
+              <div className="flex items-center gap-2">
+                <Phone className="h-5 w-5 text-primary" />
+                <span>Thomas: 07791 151427</span>
+              </div>
+              <span className="hidden sm:block text-muted-foreground">|</span>
+              <div className="flex items-center gap-2">
+                <Phone className="h-5 w-5 text-primary" />
+                <span>Ste: 07714 873398</span>
+              </div>
             </div>
           </div>
         </div>

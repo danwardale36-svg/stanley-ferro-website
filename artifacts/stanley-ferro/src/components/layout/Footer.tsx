@@ -1,7 +1,8 @@
 import { Link } from 'wouter';
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
 // @ts-ignore
-import logo from '@assets/0_a1e76b_81dd05ce246a40cab0654aee7ff74e5d_1786824390280.png';
+import logo from '@assets/FwmPQmrXgAA51T1_1786824909538.jpg';
 
 export function Footer() {
   return (
@@ -11,21 +12,21 @@ export function Footer() {
           
           {/* Brand Col */}
           <div className="flex flex-col space-y-4">
-            <div className="bg-white p-4 rounded-md inline-block w-fit mb-2">
+            <div className="bg-black rounded-md inline-block w-fit mb-2">
               <img src={logo} alt="Stanley Ferro Developments" className="h-20 object-contain" />
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               A reputable building contractor company focusing on house additions, loft conversions, and total home renovations across Crosby and surrounding areas.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <a href="https://www.facebook.com/p/Stanley-Ferro-Developments-Limited-100065145694491/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <a href="https://www.instagram.com/stanleyferrodevelopments/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
-                <Twitter className="h-4 w-4" />
+              <a href="https://x.com/ferro_ltd" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
+                <FaXTwitter className="h-4 w-4" />
               </a>
             </div>
           </div>
