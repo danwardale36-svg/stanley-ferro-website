@@ -22,6 +22,7 @@ import HmoConversions from './pages/hmo-conversions';
 import Gallery from './pages/gallery';
 import Contact from './pages/contact';
 import Privacy from './pages/privacy';
+import Terms from './pages/terms';
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ function Router() {
           <Route path="/gallery" component={Gallery} />
           <Route path="/contact" component={Contact} />
           <Route path="/privacy" component={Privacy} />
+          <Route path="/terms" component={Terms} />
           <Route component={NotFound} />
         </Switch>
       </RoutedErrorBoundary>
