@@ -65,4 +65,4 @@ jobs:
           lftp -d \
             -u "$FTP_USERNAME","$FTP_PASSWORD" \
             "$FTP_SERVER" \
-            -e "set ftp:ssl-allow yes; set ssl:verify-certificate no; set net:timeout 30; set net:max-retries 3; mirror --reverse --delete --verbose --parallel=3 $GITHUB_WORKSPACE/artifacts/stanley-ferro/dist/public/ /; quit"
+            -e "set ftp:ssl-allow yes; set ssl:verify-certificate no; set net:timeout 30; set net:max-retries 3; mirror --reverse --verbose --parallel=3 $GITHUB_WORKSPACE/artifacts/stanley-ferro/dist/public/ /; quit"
